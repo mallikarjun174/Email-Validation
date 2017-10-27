@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<div>
+First name:<input id="numb" >
+<p id="demo" style="color: red"></p>
+</div>
+<div>
+Last Name:<input id="numb1" >
+<p id="demo1" style="color: red"></p>
+</div>
+<br>
+<button type="button" onclick="myFunction()">Submit</button>
+<script>
+function myFunction() {
+    var x,y;
+    x = document.getElementById("numb").value;
+        y = document.getElementById("numb1").value;
+
+    if (x=='') {
+    document.getElementById("demo").innerHTML = "*First name name required*";
+     
+    }else{ 
+    	console.log(x);
+    	err();
+    }
+     if (y=='') {
+    
+    document.getElementById("demo1").innerHTML = "*Last name is required*";
+    }else{
+    	console.log(y);
+    	err1();
+     }
+     err2();
+     err3();
+    }
+    function err(){
+    	document.getElementById("demo").innerHTML="";
+    }
+    function err1(){
+    	document.getElementById("demo1").innerHTML="";
+    }
+    function err2(){
+    	document.getElementById("numb").value="";
+    }
+    function err3(){
+    	document.getElementById("numb1").value="";
+    }
+
+</script>
+
+</body>
+</html> 
